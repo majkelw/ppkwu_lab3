@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class JsonConverterService {
 
     public String toXml(String json) {
-        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <data>" + XML.toString(new JSONObject(json)) + "</data>";
+        return "<data>" + XML.toString(new JSONObject(json)) + "</data>";
     }
 
     public String toCsv(String json) {
