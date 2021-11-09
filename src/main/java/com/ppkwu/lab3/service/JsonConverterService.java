@@ -7,7 +7,7 @@ import org.json.XML;
 import org.springframework.stereotype.Service;
 
 @Service
-public class JsonConverter {
+public class JsonConverterService {
 
     public String toXml(String json) {
         return "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <data>" + XML.toString(new JSONObject(json)) + "</data>";
