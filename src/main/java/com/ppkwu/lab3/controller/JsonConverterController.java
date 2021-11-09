@@ -17,7 +17,7 @@ public class JsonConverterController {
     @Autowired
     private JsonConverterService jsonConverterService;
 
-    @GetMapping("/api/json/string")
+    @GetMapping(value = "/api/json/string", produces = {MediaType.APPLICATION_JSON_VALUE})
     public String getStringStatsAsJson(@RequestParam String str) {
         return service.getJson(str).block();
     }
@@ -27,7 +27,7 @@ public class JsonConverterController {
         return jsonConverterService.toXml(service.getJson(str).block());
     }
 
-    @GetMapping("/api/csv/string")
+    @GetMapping(value = "/api/csv/string", produces = {MediaType.TEXT_PLAIN_VALUE})
     public String getStringStatsAsCsv(@RequestParam String str) {
         return jsonConverterService.toCsv(service.getJson(str).block());
     }
