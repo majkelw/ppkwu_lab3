@@ -27,4 +27,9 @@ public class TextFormatterController {
         return jsonConverter.toXml(service.getJson(str).block());
     }
 
+    @GetMapping("/api/csv/string")
+    public String getStringStatsAsCsv(@RequestParam String str) {
+        return jsonConverter.toCsv(service.getJson(str).block());
+    }
+
 }
