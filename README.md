@@ -9,6 +9,7 @@ API to display string statistics like number of digits, uppercase, lowercase, sp
 |GET|/api/json/string|str|
 |GET|/api/xml/string|str|
 |GET|/api/csv/string|str|
+|GET|/api/txt/string|str|
 
 ### API call, JSON format
 Example call for str parameter:<br>
