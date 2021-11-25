@@ -58,3 +58,19 @@ Example CSV response
 str,numberOfUppercase,numberOfSpecialChars,numberOfLowercase,numberOfDigits
 al4/A3zSa9ot_tyOx-ek*,3,4,11,3
 ```
+
+### API call, TXT format
+Example call for str parameter:<br>
+al4/A3zSa9ot_tyOx-ek*
+```
+http://localhost:8081/api/txt/string?str=al4/A3zSa9ot_tyOx-ek*
+```
+### Output Result
+Example TXT response
+```
+str: al4/A3zSa9ot_tyOx-ek*
+numberOfUppercase: 3
+numberOfSpecialChars: 4
+numberOfLowercase: 11
+numberOfDigits: 3
+```
