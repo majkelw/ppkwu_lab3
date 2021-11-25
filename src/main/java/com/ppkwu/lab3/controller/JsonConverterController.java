@@ -32,4 +32,9 @@ public class JsonConverterController {
         return jsonConverterService.toCsv(service.getJson(str).block());
     }
 
+    @GetMapping(value = "/api/txt/string", produces = {MediaType.TEXT_PLAIN_VALUE})
+    public String getStringStatsAsTxt(@RequestParam String str) {
+        return jsonConverterService.toTxt(service.getJson(str).block());
+    }
+
 }

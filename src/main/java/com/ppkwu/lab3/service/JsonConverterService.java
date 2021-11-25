@@ -19,4 +19,16 @@ public class JsonConverterService {
         return CDL.toString(jsonArray);
     }
 
+    public String toTxt(String json) {
+        JSONObject jsonObject = new JSONObject(json);
+        StringBuilder txt = new StringBuilder();
+        jsonObject.keySet().forEach(key -> {
+            Object value = jsonObject.get(key);
+            txt.append(key).append(": ").append(value).append("\n");
+        });
+        if (txt.length() > 0)
+            txt.deleteCharAt(txt.length() - 1);
+        return txt.toString();
+    }
+
 }
